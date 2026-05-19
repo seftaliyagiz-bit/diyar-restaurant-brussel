@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diyar Restaurant | Grill Turc Authentique — Schaerbeek, Bruxelles</title>
+  <meta name="description" content="Restaurant grill turc authentique à Schaerbeek. Kebap, izgara, tandir. 4.9/5 sur Google · 271 avis. Ouvert 6j/7.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'none'; script-src 'self' 'unsafe-inline';">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:title" content="Diyar Restaurant | Grill Turc Authentique — Schaerbeek, Bruxelles">
+  <meta property="og:description" content="Restaurant grill turc authentique à Schaerbeek. Kebap, izgara, tandir. 4.9/5 sur Google · 271 avis. Ouvert 6j/7.">
+  <meta property="og:type" content="restaurant">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #F0D080;
+      --gold-dark: #A07830;
+      --black: #0a0a0a;
+      --black-mid: #111111;
+      --black-soft: #1a1a1a;
+      --text-primary: #ffffff;
+      --text-secondary: #cccccc;
+      --text-muted: #888888;
+      --gold-gradient: linear-gradient(135deg, #C9A84C, #F0D080);
+      --gold-gradient-hover: linear-gradient(135deg, #F0D080, #C9A84C);
+      --transition-fast: 0.25s ease;
+      --transition-med: 0.45s ease;
+      --transition-slow: 0.8s ease;
+      --shadow-gold: 0 4px 24px rgba(201,168,76,0.18);
+      --shadow-gold-hover: 0 8px 40px rgba(201,168,76,0.32);
+      --border-gold: 1px solid rgba(201,168,76,0.25);
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'DM Sans', sans-serif;
+      --section-padding: 110px 0;
+      --container-max: 1200px;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { background: var(--black); color: var(--text-primary); font-family: var(--font-body); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    ::selection { background: var(--gold); color: var(--black); }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; background: none; font-family: var(--font-body); }
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+    section { padding: var(--section-padding); }
+
+    /* ── SCROLL PROGRESS BAR ── */
+    #progress-bar {
+      position: fixed; top: 0; left: 0; z-index: 9999;
+      height: 3px; width: 0%;
+      background: var(--gold-gradient);
+      transition: width 0.1s linear;
+    }
+
+    /* ── NAVBAR ── */
+    #navbar {
+      position: fixed; top: 0; width: 100%; z-index: 1000;
+      height: 72px; padding: 0 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: transparent;
+      transition: background 0.4s ease, border-bottom 0.4s ease, backdrop-filter 0.4s ease;
+    }
+    #navbar.scrolled {
+      background: var(--black);
+      border-bottom: var(--border-gold);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .nav-logo img { height: 48px; object-fit: contain; display: block; }
+    .nav-logo .nav-logo-fallback {
+      font-family: var(--font-display); font-size: 1.6rem;
+      font-weight: 700; color: var(--gold); display: none;
+    }
+    .nav-links {
+      display: flex; gap: 36px; list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: 0.9rem; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--text-secondary);
+      position: relative; transition: color var(--transition-fast);
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0;
+      width: 100%; height: 1px; background: var(--gold);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    .lang-toggle {
+      display: flex; gap: 4px; align-items: center; margin-left: 32px;
+    }
+    .lang-btn {
+      font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em;
+      color: var(--text-muted); padding: 4px 10px;
+      border-radius: 2px; transition: all var(--transition-fast);
+      background: none; text-transform: uppercase;
+    }
+    .lang-btn.active {
+      background: var(--gold); color: var(--black); font-weight: 600;
+    }
+    .lang-btn:hover:not(.active) { color: var(--gold); }
+
+    /* Hamburger */
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      width: 28px; cursor: pointer; background: none; border: none; padding: 4px;
+    }
+    .hamburger span {
+      display: block; height: 2px; background: var(--gold);
+      border-radius: 2px; transition: all 0.35s ease;
+      transform-origin: center;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile overlay */
+    #mobile-menu {
+      position: fixed; inset: 0; z-index: 999;
+      background: var(--black); display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 36px;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+    #mobile-menu.open { opacity: 1; pointer-events: all; }
+    #mobile-menu a {
+      font-family: var(--font-display); font-size: 2.2rem;
+      color: var(--gold); font-weight: 600;
+      transition: opacity var(--transition-fast);
+    }
+    #mobile-menu a:hover { opacity: 0.75; }
+    .mobile-lang {
+      display: flex; gap: 12px; margin-top: 16px;
+    }
+    .mobile-lang .lang-btn { font-size: 0.9rem; padding: 6px 14px; border-radius: 4px; }
+
+    /* ── HERO ── */
+    #hero-section {
+      height: 100vh; min-height: 600px;
+      position: relative; overflow: hidden;
+      background-image: url('diyar hero.png');
+      background-size: cover; background-position: center;
+      background-attachment: scroll;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.88) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      height: 100%; text-align: center;
+      padding: 0 24px;
+    }
+    .hero-label {
+      font-size: 0.75rem; letter-spacing: 0.25em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 16px;
+      opacity: 0; animation: fadeInUp 0.7s ease forwards;
+      animation-delay: 0.2s;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(5rem, 12vw, 9rem);
+      font-weight: 900; color: var(--gold);
+      letter-spacing: 0.02em;
+      text-shadow: 0 4px 40px rgba(201,168,76,0.35);
+      line-height: 1;
+      opacity: 0; animation: fadeInUp 0.7s ease forwards;
+      animation-delay: 0.4s;
+    }
+    .hero-divider {
+      width: 60px; height: 1px;
+      background: var(--gold); margin: 24px auto;
+      opacity: 0; animation: fadeInUp 0.7s ease forwards;
+      animation-delay: 0.6s;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: var(--border-gold); padding: 8px 20px;
+      border-radius: 20px; font-size: 0.85rem; color: var(--gold);
+      margin-bottom: 20px;
+      opacity: 0; animation: fadeInUp 0.7s ease forwards;
+      animation-delay: 0.8s;
+    }
+    .hero-tagline {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      font-weight: 300; color: var(--text-primary);
+      letter-spacing: 0.06em; max-width: 560px;
+      margin-bottom: 32px;
+      opacity: 0; animation: fadeInUp 0.7s ease forwards;
+      animation-delay: 1.0s;
+    }
+    .hero-btns {
+      display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+      opacity: 0; animation: fadeInUp 0.7s ease forwards;
+      animation-delay: 1.2s;
+    }
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 36px; font-size: 0.9rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      background: var(--gold-gradient); color: var(--black);
+      border-radius: var(--radius-sm);
+      transition: all var(--transition-fast);
+    }
+    .btn-gold:hover {
+      background: var(--gold-gradient-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-gold-hover);
+    }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 36px; font-size: 0.9rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      border: 1px solid var(--gold); color: var(--gold);
+      border-radius: var(--radius-sm);
+      transition: all var(--transition-fast);
+    }
+    .btn-outline:hover {
+      background: rgba(201,168,76,0.1);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-gold-hover);
+    }
+    .hero-scroll-arrow {
+      position: absolute; bottom: 32px; left: 50%;
+      transform: translateX(-50%); z-index: 2;
+      color: var(--gold); font-size: 1.4rem;
+      animation: bounce 2s ease infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(10px); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── SECTION HEADINGS ── */
+    .section-label {
+      font-size: 0.7rem; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--gold);
+      opacity: 0.8; display: block; margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      background: var(--gold-gradient);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+    .section-line {
+      width: 50px; height: 2px;
+      background: var(--gold-gradient);
+      margin: 16px 0; display: block;
+    }
+    .section-heading-center { text-align: center; }
+    .section-heading-center .section-line { margin: 16px auto; }
+
+    /* ── REVEAL ANIMATION ── */
+    .reveal {
+      opacity: 0; transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── ABOUT SECTION ── */
+    #about { background: var(--black); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 55% 45%;
+      gap: 64px; align-items: center;
+    }
+    .about-image-wrap {
+      position: relative;
+    }
+    .about-image-wrap img {
+      width: 100%; height: 480px; object-fit: cover;
+      border-radius: var(--radius-md);
+      border: var(--border-gold);
+      box-shadow: var(--shadow-gold);
+    }
+    .about-image-wrap::before {
+      content: ''; position: absolute;
+      top: -12px; right: -12px;
+      width: 20px; height: 20px;
+      border-top: 2px solid var(--gold);
+      border-right: 2px solid var(--gold);
+      border-radius: 2px 2px 0 0;
+    }
+    .about-image-wrap::after {
+      content: ''; position: absolute;
+      bottom: -12px; left: -12px;
+      width: 20px; height: 20px;
+      border-bottom: 2px solid var(--gold);
+      border-left: 2px solid var(--gold);
+      border-radius: 0 0 0 2px;
+    }
+    .about-text .section-line { margin: 16px 0; }
+    .about-body {
+      font-size: 1.0rem; line-height: 1.8;
+      color: var(--text-secondary); margin-bottom: 28px;
+    }
+    .about-info-list { list-style: none; margin-bottom: 24px; }
+    .about-info-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 14px 0;
+      border-bottom: var(--border-gold);
+    }
+    .about-info-item:last-child { border-bottom: none; }
+    .about-info-item .info-icon {
+      color: var(--gold); font-size: 1rem;
+      margin-top: 2px; min-width: 18px;
+    }
+    .about-info-item .info-text {
+      font-size: 0.92rem; color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .about-info-item a { color: var(--gold); transition: opacity var(--transition-fast); }
+    .about-info-item a:hover { opacity: 0.8; }
+    .rating-pills {
+      display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;
+    }
+    .rating-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      border: var(--border-gold); padding: 6px 16px;
+      border-radius: 20px; font-size: 0.8rem; color: var(--gold);
+    }
+
+    /* ── STATS SECTION ── */
+    #stats {
+      background: var(--black-mid);
+      border-top: var(--border-gold); border-bottom: var(--border-gold);
+      padding: 80px 0;
+    }
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+    .stat-item {
+      text-align: center; padding: 24px 16px;
+      position: relative;
+    }
+    .stat-item:not(:last-child)::after {
+      content: ''; position: absolute;
+      right: 0; top: 20%; height: 60%;
+      width: 1px; background: rgba(201,168,76,0.25);
+    }
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700; color: var(--gold);
+      line-height: 1;
+    }
+    .stat-sep {
+      width: 30px; height: 1px;
+      background: var(--gold-gradient);
+      margin: 12px auto;
+    }
+    .stat-label {
+      font-size: 0.85rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--text-muted);
+    }
+
+    /* ── MENU SECTION ── */
+    #menu { background: var(--black); }
+    .tab-bar {
+      display: flex; justify-content: center;
+      flex-wrap: wrap; gap: 8px;
+      margin-bottom: 48px;
+    }
+    .tab-btn {
+      padding: 10px 28px; font-size: 0.88rem;
+      font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase; border-radius: var(--radius-sm);
+      border: var(--border-gold); color: var(--text-muted);
+      transition: all var(--transition-fast); background: none;
+    }
+    .tab-btn.active {
+      background: var(--gold-gradient);
+      color: var(--black); border-color: transparent;
+      font-weight: 600;
+    }
+    .tab-btn:hover:not(.active) { color: var(--gold); }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .menu-card {
+      background: var(--black-mid);
+      border-radius: var(--radius-md);
+      border-top: 3px solid var(--gold);
+      padding: 24px; position: relative;
+      transition: all var(--transition-med);
+    }
+    .menu-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-gold-hover);
+    }
+    .menu-card-header {
+      display: flex; align-items: flex-start;
+      justify-content: space-between; gap: 12px;
+      margin-bottom: 8px;
+    }
+    .menu-icon-wrap {
+      width: 36px; height: 36px; min-width: 36px;
+      border-radius: 50%;
+      background: var(--gold-gradient);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--black); font-size: 0.85rem;
+    }
+    .piquant-badge {
+      font-size: 0.7rem;
+      background: rgba(200,50,50,0.15); color: #e05252;
+      border: 1px solid rgba(200,50,50,0.3);
+      padding: 2px 8px; border-radius: 10px;
+      white-space: nowrap; align-self: flex-start;
+    }
+    .menu-name {
+      font-family: var(--font-display);
+      font-size: 1.05rem; font-weight: 600;
+      color: var(--text-primary); margin-bottom: 4px;
+    }
+    .menu-sub {
+      font-size: 0.82rem; font-style: italic;
+      color: var(--text-muted);
+    }
+    .menu-divider {
+      width: 30px; height: 1px;
+      background: var(--gold); margin: 12px 0;
+    }
+    .menu-price {
+      font-size: 1rem; font-weight: 700; color: var(--gold);
+    }
+
+    /* ── GALLERY SECTION ── */
+    #gallery { background: var(--black-soft); }
+    .gallery-masonry {
+      columns: 3; column-gap: 16px;
+    }
+    .gallery-item {
+      break-inside: avoid; margin-bottom: 16px;
+      position: relative; overflow: hidden;
+      border-radius: var(--radius-md); cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%; display: block;
+      transition: transform 0.5s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-overlay {
+      position: absolute; inset: 0;
+      background: rgba(201,168,76,0.22);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity 0.4s ease;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-overlay i {
+      color: #fff; font-size: 1.8rem;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    /* Lightbox */
+    #lightbox {
+      position: fixed; inset: 0; z-index: 9998;
+      background: rgba(0,0,0,0.95);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    #lightbox.open { opacity: 1; pointer-events: all; }
+    #lightbox-img {
+      max-width: 90vw; max-height: 90vh;
+      object-fit: contain; border-radius: var(--radius-md);
+    }
+    #lightbox-close {
+      position: absolute; top: 20px; right: 28px;
+      color: var(--gold); font-size: 2rem;
+      background: none; border: none; cursor: pointer;
+      transition: opacity var(--transition-fast);
+    }
+    #lightbox-close:hover { opacity: 0.7; }
+    .lightbox-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      color: var(--gold); font-size: 2rem;
+      background: rgba(0,0,0,0.4); border: none; cursor: pointer;
+      padding: 12px 18px; border-radius: var(--radius-sm);
+      transition: background var(--transition-fast);
+    }
+    .lightbox-arrow:hover { background: rgba(201,168,76,0.2); }
+    #lightbox-prev { left: 16px; }
+    #lightbox-next { right: 16px; }
+
+    /* ── HOURS SECTION ── */
+    #hours { background: var(--black); }
+    .hours-table {
+      max-width: 600px; margin: 0 auto;
+    }
+    .hours-row {
+      display: flex; justify-content: space-between;
+      align-items: center; padding: 16px 0;
+      border-bottom: var(--border-gold);
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-day {
+      font-size: 0.95rem; font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .hours-time {
+      font-size: 0.95rem; font-weight: 600;
+      color: var(--text-primary); text-align: right;
+    }
+    .hours-closed { color: #e05252; }
+    .hours-row.today {
+      background: rgba(201,168,76,0.08);
+      border-left: 3px solid var(--gold);
+      padding: 16px 12px;
+      color: var(--gold);
+    }
+    .hours-row.today .hours-day { color: var(--gold); }
+    .hours-row.today .hours-time { color: var(--gold); }
+    .open-now-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(46,160,67,0.15); color: #4caf50;
+      border: 1px solid rgba(46,160,67,0.3);
+      font-size: 0.75rem; padding: 2px 10px;
+      border-radius: 12px; margin-left: 10px;
+      font-weight: 600;
+    }
+    .open-now-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #4caf50; display: inline-block;
+    }
+
+    /* ── REVIEWS SECTION ── */
+    #reviews { background: var(--black-mid); }
+    .rating-summary {
+      text-align: center; margin-bottom: 48px;
+    }
+    .rating-big {
+      font-family: var(--font-display);
+      font-size: 4rem; font-weight: 700; color: var(--gold);
+      line-height: 1;
+    }
+    .rating-stars {
+      display: flex; justify-content: center; gap: 4px;
+      margin: 8px 0 6px;
+    }
+    .rating-stars i { color: var(--gold); font-size: 1.1rem; }
+    .rating-count {
+      font-size: 0.9rem; color: var(--text-muted); margin-bottom: 4px;
+    }
+    .rating-sub { font-size: 0.82rem; color: var(--text-muted); }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .review-card {
+      background: var(--black-soft);
+      border: var(--border-gold); border-radius: var(--radius-md);
+      padding: 28px;
+    }
+    .review-card:nth-child(1) { animation: floatCard 5s ease-in-out 0s infinite; }
+    .review-card:nth-child(2) { animation: floatCard 5s ease-in-out 0.8s infinite; }
+    .review-card:nth-child(3) { animation: floatCard 5s ease-in-out 1.6s infinite; }
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    .review-quote-icon {
+      color: var(--gold); font-size: 1.4rem; margin-bottom: 14px; opacity: 0.7;
+    }
+    .review-text {
+      font-size: 0.92rem; line-height: 1.7;
+      color: var(--text-secondary); font-style: italic;
+      margin-bottom: 16px;
+    }
+    .review-stars { display: flex; gap: 3px; margin-bottom: 10px; }
+    .review-stars i { color: var(--gold); font-size: 0.85rem; }
+    .review-author {
+      font-size: 0.88rem; font-weight: 600; color: var(--text-primary);
+    }
+    .review-source {
+      font-size: 0.78rem; color: var(--text-muted); margin-top: 2px;
+    }
+
+    /* ── RESERVATION SECTION ── */
+    #reservation { background: var(--black); }
+    .reservation-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+      align-items: center;
+    }
+    .reservation-left .big-quote {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-style: italic; color: var(--gold);
+      line-height: 1.3; margin-bottom: 28px;
+    }
+    .reservation-left .res-address {
+      font-size: 0.92rem; color: var(--text-secondary);
+      line-height: 1.7; margin-bottom: 12px;
+    }
+    .reservation-left .res-note {
+      font-style: italic; color: var(--gold);
+      font-size: 0.88rem;
+    }
+    .reservation-form {
+      background: var(--black-soft);
+      border: var(--border-gold); border-radius: var(--radius-md);
+      padding: 48px 40px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block; font-size: 0.82rem; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--text-muted); margin-bottom: 8px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%; background: var(--black);
+      border: var(--border-gold); border-radius: var(--radius-sm);
+      color: var(--text-primary); font-family: var(--font-body);
+      font-size: 0.95rem; padding: 12px 16px;
+      outline: none;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.12);
+    }
+    .form-group select option { background: var(--black-mid); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-group input.error,
+    .form-group select.error,
+    .form-group textarea.error {
+      border-color: #e05252;
+      animation: shake 0.4s ease;
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-6px); }
+      40% { transform: translateX(6px); }
+      60% { transform: translateX(-4px); }
+      80% { transform: translateX(4px); }
+    }
+    .btn-whatsapp {
+      width: 100%; padding: 14px; font-size: 0.9rem;
+      font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      background: var(--gold-gradient); color: var(--black);
+      border-radius: var(--radius-sm); display: flex;
+      align-items: center; justify-content: center; gap: 10px;
+      transition: all var(--transition-fast);
+    }
+    .btn-whatsapp:hover {
+      background: var(--gold-gradient-hover);
+      transform: translateY(-2px); box-shadow: var(--shadow-gold-hover);
+    }
+
+    /* ── CONTACT SECTION ── */
+    #contact { background: var(--black-soft); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 64px; align-items: start;
+    }
+    .contact-info-list { list-style: none; margin-bottom: 28px; }
+    .contact-info-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 14px 0; border-bottom: var(--border-gold);
+    }
+    .contact-info-item:last-child { border-bottom: none; }
+    .contact-info-item .ci-icon {
+      color: var(--gold); font-size: 1rem;
+      margin-top: 2px; min-width: 18px;
+    }
+    .contact-info-item .ci-icon.red { color: #e05252; }
+    .contact-info-item .ci-text {
+      font-size: 0.92rem; color: var(--text-secondary); line-height: 1.5;
+    }
+    .contact-info-item a { color: var(--gold); transition: opacity var(--transition-fast); }
+    .contact-info-item a:hover { opacity: 0.8; }
+    .contact-btns { display: flex; flex-direction: column; gap: 12px; }
+    .btn-ubereats {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 13px 28px; font-size: 0.88rem;
+      font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      border: 1px solid var(--gold); color: var(--gold);
+      border-radius: var(--radius-sm);
+      transition: all var(--transition-fast);
+    }
+    .btn-ubereats:hover {
+      background: rgba(201,168,76,0.1); transform: translateY(-2px);
+    }
+    .btn-call {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 13px 28px; font-size: 0.88rem;
+      font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      background: var(--gold-gradient); color: var(--black);
+      border-radius: var(--radius-sm);
+      transition: all var(--transition-fast);
+    }
+    .btn-call:hover {
+      background: var(--gold-gradient-hover); transform: translateY(-2px);
+      box-shadow: var(--shadow-gold-hover);
+    }
+    .map-wrap iframe {
+      width: 100%; height: 420px;
+      border-radius: var(--radius-md);
+      border: var(--border-gold); display: block;
+    }
+
+    /* ── STICKY MOBILE CTA ── */
+    #sticky-cta {
+      display: none;
+      position: fixed; bottom: 0; left: 0; right: 0;
+      z-index: 997; border-top: var(--border-gold);
+      background: var(--black);
+      grid-template-columns: 1fr 1fr;
+    }
+    .sticky-btn-call {
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px; padding: 16px 12px;
+      font-size: 0.85rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      background: var(--gold-gradient); color: var(--black);
+      transition: opacity var(--transition-fast);
+    }
+    .sticky-btn-call:hover { opacity: 0.9; }
+    .sticky-btn-wa {
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px; padding: 16px 12px;
+      font-size: 0.85rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      background: #25D366; color: #fff;
+      transition: opacity var(--transition-fast);
+    }
+    .sticky-btn-wa:hover { opacity: 0.9; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #050505;
+      border-top: var(--border-gold);
+      padding: 48px 0 32px;
+      text-align: center;
+    }
+    .footer-logo img {
+      height: 40px; object-fit: contain;
+      margin: 0 auto 16px;
+    }
+    .footer-tagline {
+      font-size: 0.88rem; color: var(--text-muted);
+      margin-bottom: 28px;
+    }
+    .footer-nav {
+      display: flex; justify-content: center; flex-wrap: wrap;
+      gap: 8px 28px; list-style: none; margin-bottom: 28px;
+    }
+    .footer-nav a {
+      font-size: 0.82rem; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--text-muted); transition: color var(--transition-fast);
+    }
+    .footer-nav a:hover { color: var(--gold); }
+    .footer-socials {
+      display: flex; justify-content: center; gap: 14px;
+      margin-bottom: 28px;
+    }
+    .social-btn {
+      width: 40px; height: 40px; border-radius: 50%;
+      border: var(--border-gold); display: flex;
+      align-items: center; justify-content: center;
+      color: var(--gold); font-size: 1rem;
+      transition: all var(--transition-fast);
+    }
+    .social-btn:hover {
+      background: var(--gold); color: var(--black);
+      border-color: var(--gold);
+    }
+    .footer-divider {
+      height: 1px; background: rgba(201,168,76,0.15);
+      margin: 0 0 24px;
+    }
+    .footer-copy {
+      font-size: 0.78rem; color: var(--text-muted);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      :root { --section-padding: 70px 0; }
+      .container { padding: 0 16px; }
+      #navbar { padding: 0 20px; }
+      .nav-links, .lang-toggle { display: none !important; }
+      .hamburger { display: flex; }
+      #sticky-cta { display: grid; }
+      body { padding-bottom: 80px; }
+
+      .hero-title { font-size: clamp(3rem, 12vw, 5rem); }
+      .hero-btns { flex-direction: column; align-items: center; }
+
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-image-wrap { order: 2; }
+      .about-image-wrap img { height: 280px; }
+
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat-item:nth-child(2)::after { display: none; }
+      .stat-item:nth-child(3)::after { display: none; }
+      .stat-item { border-bottom: var(--border-gold); }
+      .stat-item:nth-child(3),
+      .stat-item:nth-child(4) { border-bottom: none; }
+
+      .gallery-masonry { columns: 2; }
+
+      .reviews-grid { grid-template-columns: 1fr; }
+
+      .reservation-grid { grid-template-columns: 1fr; gap: 40px; }
+      .reservation-form { padding: 32px 24px; }
+
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .map-wrap iframe { height: 280px; }
+
+      .menu-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title { font-size: 2.8rem; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-masonry { columns: 1; }
+      .btn-gold, .btn-outline {
+        width: 100%; justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="progress-bar"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <img src="diyar logo.png" alt="Diyar Restaurant" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="nav-logo-fallback">Diyar</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about" data-lang-fr="À propos" data-lang-nl="Over ons" data-lang-en="About" data-lang-tr="Hakkında">À propos</a></li>
+      <li><a href="#menu" data-lang-fr="Menu" data-lang-nl="Menu" data-lang-en="Menu" data-lang-tr="Menü">Menu</a></li>
+      <li><a href="#gallery" data-lang-fr="Galerie" data-lang-nl="Galerij" data-lang-en="Gallery" data-lang-tr="Galeri">Galerie</a></li>
+      <li><a href="#hours" data-lang-fr="Horaires" data-lang-nl="Openingstijden" data-lang-en="Hours" data-lang-tr="Saatler">Horaires</a></li>
+      <li><a href="#contact" data-lang-fr="Contact" data-lang-nl="Contact" data-lang-en="Contact" data-lang-tr="İletişim">Contact</a></li>
+      <li><a href="#reservation" data-lang-fr="Réservation" data-lang-nl="Reservering" data-lang-en="Reservation" data-lang-tr="Rezervasyon">Réservation</a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="nl">NL</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="tr">TR</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu">
+    <a href="#about" class="mobile-link" data-lang-fr="À propos" data-lang-nl="Over ons" data-lang-en="About" data-lang-tr="Hakkında">À propos</a>
+    <a href="#menu" class="mobile-link" data-lang-fr="Menu" data-lang-nl="Menu" data-lang-en="Menu" data-lang-tr="Menü">Menu</a>
+    <a href="#gallery" class="mobile-link" data-lang-fr="Galerie" data-lang-nl="Galerij" data-lang-en="Gallery" data-lang-tr="Galeri">Galerie</a>
+    <a href="#hours" class="mobile-link" data-lang-fr="Horaires" data-lang-nl="Openingstijden" data-lang-en="Hours" data-lang-tr="Saatler">Horaires</a>
+    <a href="#contact" class="mobile-link" data-lang-fr="Contact" data-lang-nl="Contact" data-lang-en="Contact" data-lang-tr="İletişim">Contact</a>
+    <a href="#reservation" class="mobile-link" data-lang-fr="Réservation" data-lang-nl="Reservering" data-lang-en="Reservation" data-lang-tr="Rezervasyon">Réservation</a>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="nl">NL</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="tr">TR</button>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-label"
+         data-lang-fr="Restaurant Grill Turc · Schaerbeek · Bruxelles"
+         data-lang-nl="Turks Grillrestaurant · Schaerbeek · Brussel"
+         data-lang-en="Turkish Grill Restaurant · Schaerbeek · Brussels"
+         data-lang-tr="Türk Izgara Restoranı · Schaerbeek · Brüksel">
+        Restaurant Grill Turc · Schaerbeek · Bruxelles
+      </p>
+      <h1 class="hero-title">Diyar</h1>
+      <div class="hero-divider"></div>
+      <div class="hero-badge">
+        <i class="fa-solid fa-star"></i>
+        <span>4.9/5 · 271 avis Google</span>
+      </div>
+      <p class="hero-tagline"
+         data-lang-fr="L'art de la grillade turque au coeur de Bruxelles"
+         data-lang-nl="De kunst van Turks grillen in het hart van Brussel"
+         data-lang-en="The art of Turkish grilling in the heart of Brussels"
+         data-lang-tr="Brüksel'in kalbinde Türk ızgara sanatı">
+        L'art de la grillade turque au coeur de Bruxelles
+      </p>
+      <div class="hero-btns">
+        <a href="tel:+3224493631" class="btn-gold">
+          <i class="fa-solid fa-phone"></i>
+          <span data-lang-fr="Réserver une table" data-lang-nl="Tafel reserveren" data-lang-en="Book a table" data-lang-tr="Masa rezervasyonu">Réserver une table</span>
+        </a>
+        <a href="#menu" class="btn-outline">
+          <i class="fa-solid fa-utensils"></i>
+          <span data-lang-fr="Voir le menu" data-lang-nl="Bekijk menu" data-lang-en="See the menu" data-lang-tr="Menüyü gör">Voir le menu</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-arrow">
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <span class="section-label"
+                data-lang-fr="Notre histoire"
+                data-lang-nl="Ons verhaal"
+                data-lang-en="Our story"
+                data-lang-tr="Hikayemiz">Notre histoire</span>
+          <h2 class="section-title"
+              data-lang-fr="Authenticité &amp; Passion"
+              data-lang-nl="Authenticiteit &amp; Passie"
+              data-lang-en="Authenticity &amp; Passion"
+              data-lang-tr="Özgünlük &amp; Tutku">Authenticité &amp; Passion</h2>
+          <span class="section-line"></span>
+          <p class="about-body"
+             data-lang-fr="Depuis plus de 10 ans, Diyar Restaurant est une référence de la cuisine turque à Schaerbeek. Nos grillades préparées avec passion et des ingrédients frais vous transportent directement en Turquie."
+             data-lang-nl="Al meer dan 10 jaar is Diyar Restaurant een referentie voor Turkse keuken in Schaerbeek. Onze grillgerechten, bereid met passie en verse ingrediënten, brengen u rechtstreeks naar Turkije."
+             data-lang-en="For over 10 years, Diyar Restaurant has been a reference for Turkish cuisine in Schaerbeek. Our grills prepared with passion and fresh ingredients take you directly to Turkey."
+             data-lang-tr="10 yılı aşkın süredir Diyar Restaurant, Schaerbeek'te Türk mutfağının referansı olmaya devam etmektedir.">
+            Depuis plus de 10 ans, Diyar Restaurant est une référence de la cuisine turque à Schaerbeek. Nos grillades préparées avec passion et des ingrédients frais vous transportent directement en Turquie.
+          </p>
+          <ul class="about-info-list">
+            <li class="about-info-item">
+              <i class="fa-solid fa-location-dot info-icon"></i>
+              <span class="info-text">Chaussée de Haecht 91, 1030 Schaerbeek, Bruxelles</span>
+            </li>
+            <li class="about-info-item">
+              <i class="fa-solid fa-phone info-icon"></i>
+              <span class="info-text"><a href="tel:+3224493631">+32 2 449 36 31</a></span>
+            </li>
+            <li class="about-info-item">
+              <i class="fa-solid fa-clock info-icon"></i>
+              <span class="info-text"
+                    data-lang-fr="Mar–Dim : 8h–23h · Lundi fermé"
+                    data-lang-nl="Di–Zo : 8u–23u · Maandag gesloten"
+                    data-lang-en="Tue–Sun: 8AM–11PM · Monday closed"
+                    data-lang-tr="Sal–Paz: 8–23 · Pazartesi kapalı">
+                Mar–Dim : 8h–23h · Lundi fermé
+              </span>
+            </li>
+          </ul>
+          <div class="rating-pills">
+            <div class="rating-pill">
+              <i class="fa-solid fa-star"></i>
+              <span>4.9/5 Google · 271 avis</span>
+            </div>
+            <div class="rating-pill">
+              <i class="fa-solid fa-star"></i>
+              <span>4.5/5 Uber Eats · 41 avis</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-image-wrap reveal">
+          <img src="diyar yemek.png" alt="Spécialités Diyar Restaurant">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-number" data-count="10" data-suffix="+">0</div>
+          <div class="stat-sep"></div>
+          <div class="stat-label"
+               data-lang-fr="Ans d'expérience"
+               data-lang-nl="Jaar ervaring"
+               data-lang-en="Years of experience"
+               data-lang-tr="Yıl tecrübe">Ans d'expérience</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-count="271" data-suffix="+">0</div>
+          <div class="stat-sep"></div>
+          <div class="stat-label"
+               data-lang-fr="Avis Google"
+               data-lang-nl="Google reviews"
+               data-lang-en="Google reviews"
+               data-lang-tr="Google yorumu">Avis Google</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-count="4.9" data-decimals="1">0</div>
+          <div class="stat-sep"></div>
+          <div class="stat-label"
+               data-lang-fr="Note moyenne"
+               data-lang-nl="Gemiddelde score"
+               data-lang-en="Average rating"
+               data-lang-tr="Ortalama puan">Note moyenne</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-static="6/7">6/7</div>
+          <div class="stat-sep"></div>
+          <div class="stat-label"
+               data-lang-fr="Jours ouverts"
+               data-lang-nl="Dagen open"
+               data-lang-en="Days open"
+               data-lang-tr="Gün açık">Jours ouverts</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="container">
+      <div class="section-heading-center reveal">
+        <span class="section-label"
+              data-lang-fr="Nos spécialités"
+              data-lang-nl="Onze specialiteiten"
+              data-lang-en="Our specialities"
+              data-lang-tr="Özel yemeklerimiz">Nos spécialités</span>
+        <h2 class="section-title"
+            data-lang-fr="La Carte"
+            data-lang-nl="De Kaart"
+            data-lang-en="The Menu"
+            data-lang-tr="Menü">La Carte</h2>
+        <span class="section-line" style="margin:16px auto;"></span>
+      </div>
+      <div class="tab-bar reveal">
+        <button class="tab-btn active" data-filter="izgaralar">
+          <i class="fa-solid fa-fire" style="margin-right:6px;"></i>
+          Izgaralar / Grillades
+        </button>
+      </div>
+      <div class="menu-grid">
+
+        <div class="menu-card reveal" style="transition-delay:0.06s">
+          <div class="menu-card-header">
+            <div class="menu-icon-wrap"><i class="fa-solid fa-fire"></i></div>
+            <span class="piquant-badge"
+                  data-lang-fr="Piquant"
+                  data-lang-nl="Pittig"
+                  data-lang-en="Spicy"
+                  data-lang-tr="Acılı">Piquant</span>
+          </div>
+          <div class="menu-name">Adana Kebap</div>
+          <div class="menu-sub">Brochette Kefta</div>
+          <div class="menu-divider"></div>
+          <div class="menu-price">€21.50</div>
+        </div>
+
+        <div class="menu-card reveal" style="transition-delay:0.12s">
+          <div class="menu-card-header">
+            <div class="menu-icon-wrap"><i class="fa-solid fa-fire"></i></div>
+          </div>
+          <div class="menu-name">Urfa Kebap</div>
+          <div class="menu-sub">Brochette Kefta</div>
+          <div class="menu-divider"></div>
+          <div class="menu-price">€21.50</div>
+        </div>
+
+        <div class="menu-card reveal" style="transition-delay:0.18s">
+          <div class="menu-card-header">
+            <div class="menu-icon-wrap"><i class="fa-solid fa-fire"></i></div>
+          </div>
+          <div class="menu-name">Patlican Kebap</div>
+          <div class="menu-sub">Kebap Aubergine</div>
+          <div class="menu-divider"></div>
+          <div class="menu-price">€26.00</div>
+        </div>
+
+        <div class="menu-card reveal" style="transition-delay:0.24s">
+          <div class="menu-card-header">
+            <div class="menu-icon-wrap"><i class="fa-solid fa-drumstick-bite"></i></div>
+          </div>
+          <div class="menu-name">Tavuk Sis</div>
+          <div class="menu-sub">Brochette Poulet</div>
+          <div class="menu-divider"></div>
+          <div class="menu-price">€20.00</div>
+        </div>
+
+        <div class="menu-card reveal" style="transition-delay:0.30s">
+          <div class="menu-card-header">
+            <div class="menu-icon-wrap"><i class="fa-solid fa-fire"></i></div>
+          </div>
+          <div class="menu-name">Kuzu Sis</div>
+          <div class="menu-sub">Brochette Agneau</div>
+          <div class="menu-divider"></div>
+          <div class="menu-price">€24.00</div>
+        </div>
+
+        <div class="menu-card reveal" style="transition-delay:0.36s">
+          <div class="menu-card-header">
+            <div class="menu-icon-wrap"><i class="fa-solid fa-fire"></i></div>
+          </div>
+          <div class="menu-name">Beyti</div>
+          <div class="menu-sub">Beyti Kebap</div>
+          <div class="menu-divider"></div>
+          <div class="menu-price">€24.00</div>
+        </div>
+
+        <div class="menu-card reveal" style="transition-delay:0.06s">
+          <div class="menu-card-header">
+            <div class="menu-icon-wrap"><i class="fa-solid fa-fire"></i></div>
+          </div>
+          <div class="menu-name">Pirzola</div>
+          <div class="menu-sub">Côtelette Agneau</div>
+          <div class="menu-divider"></div>
+          <div class="menu-price">€25.00</div>
+        </div>
+
+        <div class="menu-card reveal" style="transition-delay:0.12s">
+          <div class="menu-card-header">
+            <div class="menu-icon-wrap"><i class="fa-solid fa-fire"></i></div>
+          </div>
+          <div class="menu-name">Kofte</div>
+          <div class="menu-sub">Kefta</div>
+          <div class="menu-divider"></div>
+          <div class="menu-price">€20.00</div>
+        </div>
+
+        <div class="menu-card reveal" style="transition-delay:0.18s">
+          <div class="menu-card-header">
+            <div class="menu-icon-wrap"><i class="fa-solid fa-drumstick-bite"></i></div>
+          </div>
+          <div class="menu-name">Kanat</div>
+          <div class="menu-sub">Ailes De Poulet</div>
+          <div class="menu-divider"></div>
+          <div class="menu-price">€20.00</div>
+        </div>
+
+        <div class="menu-card reveal" style="transition-delay:0.24s">
+          <div class="menu-card-header">
+            <div class="menu-icon-wrap"><i class="fa-solid fa-fire"></i></div>
+          </div>
+          <div class="menu-name">Kuzu Cop Sis</div>
+          <div class="menu-sub">Br. Agneau (Par Pcs.)</div>
+          <div class="menu-divider"></div>
+          <div class="menu-price">€2.50 / pcs</div>
+        </div>
+
+        <div class="menu-card reveal" style="transition-delay:0.30s">
+          <div class="menu-card-header">
+            <div class="menu-icon-wrap"><i class="fa-solid fa-drumstick-bite"></i></div>
+          </div>
+          <div class="menu-name">Tavuk Cop Sis</div>
+          <div class="menu-sub">Br. Poulet (Par Pcs.)</div>
+          <div class="menu-divider"></div>
+          <div class="menu-price">€2.50 / pcs</div>
+        </div>
+
+        <div class="menu-card reveal" style="transition-delay:0.36s">
+          <div class="menu-card-header">
+            <div class="menu-icon-wrap"><i class="fa-solid fa-fire"></i></div>
+          </div>
+          <div class="menu-name">Kaburga</div>
+          <div class="menu-sub">Cotes D'agneau</div>
+          <div class="menu-divider"></div>
+          <div class="menu-price">€25.00</div>
+        </div>
+
+        <div class="menu-card reveal" style="transition-delay:0.06s">
+          <div class="menu-card-header">
+            <div class="menu-icon-wrap"><i class="fa-solid fa-fire"></i></div>
+          </div>
+          <div class="menu-name">Karisik Izgara</div>
+          <div class="menu-sub">Grillade Mixte</div>
+          <div class="menu-divider"></div>
+          <div class="menu-price">€29.00</div>
+        </div>
+
+        <div class="menu-card reveal" style="transition-delay:0.12s">
+          <div class="menu-card-header">
+            <div class="menu-icon-wrap"><i class="fa-solid fa-fire"></i></div>
+          </div>
+          <div class="menu-name">Karisik Izgara 2 Pers.</div>
+          <div class="menu-sub">Grillade Mixte 2 Personnes</div>
+          <div class="menu-divider"></div>
+          <div class="menu-price">€55.00</div>
+        </div>
+
+        <div class="menu-card reveal" style="transition-delay:0.18s">
+          <div class="menu-card-header">
+            <div class="menu-icon-wrap"><i class="fa-solid fa-fire"></i></div>
+          </div>
+          <div class="menu-name">Karisik Izgara 4 Pers.</div>
+          <div class="menu-sub">Grillade Mixte 4 Personnes</div>
+          <div class="menu-divider"></div>
+          <div class="menu-price"
+               data-lang-fr="Prix sur demande"
+               data-lang-nl="Prijs op aanvraag"
+               data-lang-en="Price on request"
+               data-lang-tr="Fiyat için sorunuz">Prix sur demande</div>
+        </div>
+
+        <div class="menu-card reveal" style="transition-delay:0.24s">
+          <div class="menu-card-header">
+            <div class="menu-icon-wrap"><i class="fa-solid fa-fire"></i></div>
+          </div>
+          <div class="menu-name">Tandir</div>
+          <div class="menu-sub">Tajine Agneau</div>
+          <div class="menu-divider"></div>
+          <div class="menu-price">€25.00</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-heading-center reveal">
+        <span class="section-label"
+              data-lang-fr="Notre cuisine"
+              data-lang-nl="Onze keuken"
+              data-lang-en="Our cuisine"
+              data-lang-tr="Mutfağımız">Notre cuisine</span>
+        <h2 class="section-title"
+            data-lang-fr="Galerie"
+            data-lang-nl="Galerij"
+            data-lang-en="Gallery"
+            data-lang-tr="Galeri">Galerie</h2>
+        <span class="section-line" style="margin:16px auto;"></span>
+      </div>
+      <div class="gallery-masonry reveal">
+        <div class="gallery-item" data-index="0">
+          <img src="diyar çaydanlık.png" alt="Çaydanlık – Diyar Restaurant" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-item" data-index="1">
+          <img src="diyar yemek 1.png" alt="Spécialité turque – Diyar Restaurant" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-item" data-index="2">
+          <img src="diyar yemek 2.png" alt="Izgara – Diyar Restaurant" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-item" data-index="3">
+          <img src="diyar yemek 3.png" alt="Kebap – Diyar Restaurant" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-item" data-index="4">
+          <img src="diyar yemek 4.png" alt="Grillade – Diyar Restaurant" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+        <div class="gallery-item" data-index="5">
+          <img src="diyar yemek 5.png" alt="Plat turc – Diyar Restaurant" loading="lazy">
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image agrandie">
+    <button id="lightbox-close" aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lightbox-arrow" id="lightbox-prev" aria-label="Précédent"><i class="fa-solid fa-chevron-left"></i></button>
+    <img id="lightbox-img" src="" alt="Galerie Diyar Restaurant">
+    <button class="lightbox-arrow" id="lightbox-next" aria-label="Suivant"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <!-- HOURS -->
+  <section id="hours">
+    <div class="container">
+      <div class="section-heading-center reveal">
+        <span class="section-label"
+              data-lang-fr="Quand nous rendre visite"
+              data-lang-nl="Wanneer ons bezoeken"
+              data-lang-en="When to visit us"
+              data-lang-tr="Ziyaret saatleri">Quand nous rendre visite</span>
+        <h2 class="section-title"
+            data-lang-fr="Horaires d'ouverture"
+            data-lang-nl="Openingstijden"
+            data-lang-en="Opening Hours"
+            data-lang-tr="Çalışma Saatleri">Horaires d'ouverture</h2>
+        <span class="section-line" style="margin:16px auto;"></span>
+      </div>
+      <div class="hours-table reveal">
+        <div class="hours-row" data-day="2">
+          <span class="hours-day"
+                data-lang-fr="Mardi"
+                data-lang-nl="Dinsdag"
+                data-lang-en="Tuesday"
+                data-lang-tr="Salı">Mardi</span>
+          <span class="hours-time">8:00 – 23:00</span>
+        </div>
+        <div class="hours-row" data-day="3">
+          <span class="hours-day"
+                data-lang-fr="Mercredi"
+                data-lang-nl="Woensdag"
+                data-lang-en="Wednesday"
+                data-lang-tr="Çarşamba">Mercredi</span>
+          <span class="hours-time">8:00 – 23:00</span>
+        </div>
+        <div class="hours-row" data-day="4">
+          <span class="hours-day"
+                data-lang-fr="Jeudi"
+                data-lang-nl="Donderdag"
+                data-lang-en="Thursday"
+                data-lang-tr="Perşembe">Jeudi</span>
+          <span class="hours-time">8:00 – 23:00</span>
+        </div>
+        <div class="hours-row" data-day="5">
+          <span class="hours-day"
+                data-lang-fr="Vendredi"
+                data-lang-nl="Vrijdag"
+                data-lang-en="Friday"
+                data-lang-tr="Cuma">Vendredi</span>
+          <span class="hours-time">8:00 – 23:00</span>
+        </div>
+        <div class="hours-row" data-day="6">
+          <span class="hours-day"
+                data-lang-fr="Samedi"
+                data-lang-nl="Zaterdag"
+                data-lang-en="Saturday"
+                data-lang-tr="Cumartesi">Samedi</span>
+          <span class="hours-time">8:00 – 23:00</span>
+        </div>
+        <div class="hours-row" data-day="0">
+          <span class="hours-day"
+                data-lang-fr="Dimanche"
+                data-lang-nl="Zondag"
+                data-lang-en="Sunday"
+                data-lang-tr="Pazar">Dimanche</span>
+          <span class="hours-time">8:00 – 23:00</span>
+        </div>
+        <div class="hours-row" data-day="1">
+          <span class="hours-day"
+                data-lang-fr="Lundi"
+                data-lang-nl="Maandag"
+                data-lang-en="Monday"
+                data-lang-tr="Pazartesi">Lundi</span>
+          <span class="hours-time hours-closed"
+                data-lang-fr="Fermé"
+                data-lang-nl="Gesloten"
+                data-lang-en="Closed"
+                data-lang-tr="Kapalı">Fermé</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="container">
+      <div class="section-heading-center reveal">
+        <span class="section-label"
+              data-lang-fr="Ce que disent nos clients"
+              data-lang-nl="Wat onze klanten zeggen"
+              data-lang-en="What our guests say"
+              data-lang-tr="Misafirlerimiz ne diyor">Ce que disent nos clients</span>
+        <h2 class="section-title"
+            data-lang-fr="Avis"
+            data-lang-nl="Beoordelingen"
+            data-lang-en="Reviews"
+            data-lang-tr="Yorumlar">Avis</h2>
+        <span class="section-line" style="margin:16px auto;"></span>
+      </div>
+      <div class="rating-summary reveal">
+        <div class="rating-big">4.9</div>
+        <div class="rating-stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="rating-count"
+             data-lang-fr="271 avis Google"
+             data-lang-nl="271 Google beoordelingen"
+             data-lang-en="271 Google reviews"
+             data-lang-tr="271 Google yorumu">271 avis Google</div>
+        <div class="rating-sub">4.5 · 41 avis Uber Eats</div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="review-text"
+             data-lang-fr="Les meilleures grillades de Bruxelles. L'Adana kebap est parfait, bien épicé comme il faut. Le service est rapide et chaleureux!"
+             data-lang-nl="De beste grillgerechten van Brussel. De Adana kebap is perfect, goed gekruid zoals het hoort. De service is snel en vriendelijk!"
+             data-lang-en="The best grills in Brussels. The Adana kebap is perfect, well spiced just right. The service is fast and warm!"
+             data-lang-tr="Brüksel'in en iyi ızgaraları. Adana kebap mükemmel, tam kıvamında baharatlı. Servis hızlı ve sıcak!">
+            Les meilleures grillades de Bruxelles. L'Adana kebap est parfait, bien épicé comme il faut. Le service est rapide et chaleureux!
+          </p>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="review-author">Mohammed A.</div>
+          <div class="review-source">Google</div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="review-text"
+             data-lang-fr="Incroyable rapport qualité-prix. Le karisik izgara pour 2 personnes est généreux et délicieux. On y retourne chaque semaine!"
+             data-lang-nl="Ongelooflijke prijs-kwaliteitverhouding. De karisik izgara voor 2 personen is royaal en heerlijk. We gaan er elke week naartoe!"
+             data-lang-en="Incredible value for money. The karisik izgara for 2 is generous and delicious. We go back every week!"
+             data-lang-tr="İnanılmaz fiyat-kalite oranı. 2 kişilik karisik izgara cömert ve lezzetli. Her hafta gidiyoruz!">
+            Incroyable rapport qualité-prix. Le karisik izgara pour 2 personnes est généreux et délicieux. On y retourne chaque semaine!
+          </p>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="review-author">Sophie D.</div>
+          <div class="review-source">Google</div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="review-text"
+             data-lang-fr="Authentique et savoureux. Le tandir est fondant, les kebaps sont préparés à la commande. Meilleur turc du quartier!"
+             data-lang-nl="Authentiek en smakelijk. De tandir is mals, de kebabs worden op bestelling bereid. Beste Turks restaurant in de buurt!"
+             data-lang-en="Authentic and flavorful. The tandir melts in your mouth, kebaps made to order. Best Turkish in the neighborhood!"
+             data-lang-tr="Otantik ve lezzetli. Tandir ağızda eriyor, kebaplar siparişe göre hazırlanıyor. Mahallenin en iyi Türk restoranı!">
+            Authentique et savoureux. Le tandir est fondant, les kebaps sont préparés à la commande. Meilleur turc du quartier!
+          </p>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="review-author">Yusuf K.</div>
+          <div class="review-source">Uber Eats</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVATION -->
+  <section id="reservation">
+    <div class="container">
+      <div class="reservation-grid">
+        <div class="reservation-left reveal">
+          <p class="big-quote"
+             data-lang-fr="Une table vous attend."
+             data-lang-nl="Een tafel wacht op u."
+             data-lang-en="A table awaits you."
+             data-lang-tr="Sizi bir masa bekliyor.">"Une table vous attend."</p>
+          <p class="res-address">
+            <i class="fa-solid fa-location-dot" style="color:var(--gold);margin-right:8px;"></i>
+            Chaussée de Haecht 91, 1030 Schaerbeek, Bruxelles<br>
+            <i class="fa-solid fa-phone" style="color:var(--gold);margin-right:8px;margin-top:8px;display:inline-block;"></i>
+            <a href="tel:+3224493631" style="color:var(--gold);">+32 2 449 36 31</a>
+          </p>
+          <p class="res-note"
+             data-lang-fr="Lundi : fermé"
+             data-lang-nl="Maandag : gesloten"
+             data-lang-en="Monday: closed"
+             data-lang-tr="Pazartesi: kapalı">Lundi : fermé</p>
+        </div>
+        <div class="reveal">
+          <form class="reservation-form" id="reservation-form" novalidate>
+            <div class="form-group">
+              <label for="res-name"
+                     data-lang-fr="Votre nom"
+                     data-lang-nl="Uw naam"
+                     data-lang-en="Your name"
+                     data-lang-tr="Adınız">Votre nom</label>
+              <input type="text" id="res-name" name="name" required
+                     data-placeholder-fr="Jean Dupont"
+                     data-placeholder-nl="Jan Janssen"
+                     data-placeholder-en="John Smith"
+                     data-placeholder-tr="Ali Yılmaz"
+                     placeholder="Jean Dupont">
+            </div>
+            <div class="form-group">
+              <label for="res-date"
+                     data-lang-fr="Date souhaitée"
+                     data-lang-nl="Gewenste datum"
+                     data-lang-en="Preferred date"
+                     data-lang-tr="Tercih edilen tarih">Date souhaitée</label>
+              <input type="date" id="res-date" name="date" required>
+            </div>
+            <div class="form-group">
+              <label for="res-guests"
+                     data-lang-fr="Nombre de personnes"
+                     data-lang-nl="Aantal personen"
+                     data-lang-en="Number of guests"
+                     data-lang-tr="Kişi sayısı">Nombre de personnes</label>
+              <select id="res-guests" name="guests" required>
+                <option value="">—</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="res-message"
+                     data-lang-fr="Message (optionnel)"
+                     data-lang-nl="Bericht (optioneel)"
+                     data-lang-en="Message (optional)"
+                     data-lang-tr="Mesaj (isteğe bağlı)">Message (optionnel)</label>
+              <textarea id="res-message" name="message"
+                        data-placeholder-fr="Allergie, occasion spéciale..."
+                        data-placeholder-nl="Allergie, speciale gelegenheid..."
+                        data-placeholder-en="Allergy, special occasion..."
+                        data-placeholder-tr="Alerji, özel gün..."
+                        placeholder="Allergie, occasion spéciale..."></textarea>
+            </div>
+            <button type="submit" class="btn-whatsapp">
+              <i class="fa-brands fa-whatsapp" style="font-size:1.2rem;"></i>
+              <span data-lang-fr="Réserver via WhatsApp"
+                    data-lang-nl="Reserveren via WhatsApp"
+                    data-lang-en="Book via WhatsApp"
+                    data-lang-tr="WhatsApp ile rezervasyon">Réserver via WhatsApp</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-heading-center reveal">
+        <span class="section-label"
+              data-lang-fr="Nous trouver"
+              data-lang-nl="Ons vinden"
+              data-lang-en="Find us"
+              data-lang-tr="Bizi bulun">Nous trouver</span>
+        <h2 class="section-title"
+            data-lang-fr="Contact &amp; Accès"
+            data-lang-nl="Contact &amp; Bereikbaarheid"
+            data-lang-en="Contact &amp; Access"
+            data-lang-tr="İletişim &amp; Ulaşım">Contact &amp; Accès</h2>
+        <span class="section-line" style="margin:16px auto;"></span>
+      </div>
+      <div class="contact-grid">
+        <div class="reveal">
+          <ul class="contact-info-list">
+            <li class="contact-info-item">
+              <i class="fa-solid fa-location-dot ci-icon"></i>
+              <span class="ci-text">Chaussée de Haecht 91, 1030 Schaerbeek, Bruxelles</span>
+            </li>
+            <li class="contact-info-item">
+              <i class="fa-solid fa-phone ci-icon"></i>
+              <span class="ci-text"><a href="tel:+3224493631">+32 2 449 36 31</a></span>
+            </li>
+            <li class="contact-info-item">
+              <i class="fa-solid fa-clock ci-icon"></i>
+              <span class="ci-text"
+                    data-lang-fr="Mar–Dim : 8h–23h"
+                    data-lang-nl="Di–Zo : 8u–23u"
+                    data-lang-en="Tue–Sun: 8AM–11PM"
+                    data-lang-tr="Sal–Paz: 8–23">Mar–Dim : 8h–23h</span>
+            </li>
+            <li class="contact-info-item">
+              <i class="fa-solid fa-circle-xmark ci-icon red"></i>
+              <span class="ci-text"
+                    data-lang-fr="Lundi : fermé"
+                    data-lang-nl="Maandag : gesloten"
+                    data-lang-en="Monday: closed"
+                    data-lang-tr="Pazartesi: kapalı">Lundi : fermé</span>
+            </li>
+            <li class="contact-info-item">
+              <i class="fa-solid fa-star ci-icon"></i>
+              <span class="ci-text">4.9/5 Google · 271 avis</span>
+            </li>
+            <li class="contact-info-item">
+              <i class="fa-solid fa-star ci-icon"></i>
+              <span class="ci-text">4.5/5 Uber Eats · 41 avis</span>
+            </li>
+          </ul>
+          <div class="contact-btns">
+            <a href="https://www.ubereats.com/be/store/diyar-restaurant/19tTl5qTU2-wOSGBVP1NhA"
+               target="_blank" rel="noopener noreferrer" class="btn-ubereats">
+              <i class="fa-solid fa-motorcycle"></i>
+              <span data-lang-fr="Commander sur Uber Eats"
+                    data-lang-nl="Bestellen via Uber Eats"
+                    data-lang-en="Order on Uber Eats"
+                    data-lang-tr="Uber Eats'ten sipariş ver">Commander sur Uber Eats</span>
+            </a>
+            <a href="tel:+3224493631" class="btn-call">
+              <i class="fa-solid fa-phone"></i>
+              <span data-lang-fr="Appeler maintenant"
+                    data-lang-nl="Nu bellen"
+                    data-lang-en="Call now"
+                    data-lang-tr="Şimdi ara">Appeler maintenant</span>
+            </a>
+          </div>
+        </div>
+        <div class="map-wrap reveal">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.0!2d4.3713!3d50.8653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c4e5bba5b6db%3A0x8e3a9d1c13a8b3e0!2sChaussée%20de%20Haecht%2091%2C%201030%20Schaerbeek!5e0!3m2!1sfr!2sbe!4v1716000000000!5m2!1sfr!2sbe"
+            width="100%" height="420"
+            style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Diyar Restaurant – Chaussée de Haecht 91, Schaerbeek"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STICKY MOBILE CTA -->
+  <div id="sticky-cta">
+    <a href="tel:+3224493631" class="sticky-btn-call">
+      <i class="fa-solid fa-phone"></i>
+      <span data-lang-fr="Appeler" data-lang-nl="Bellen" data-lang-en="Call" data-lang-tr="Ara">Appeler</span>
+    </a>
+    <a href="https://wa.me/3224493631" target="_blank" rel="noopener noreferrer" class="sticky-btn-wa">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <img src="diyar logo.png" alt="Diyar Restaurant" onerror="this.style.display='none'">
+      </div>
+      <p class="footer-tagline"
+         data-lang-fr="Grill Turc Authentique · Schaerbeek, Bruxelles"
+         data-lang-nl="Authentiek Turks Grill · Schaerbeek, Brussel"
+         data-lang-en="Authentic Turkish Grill · Schaerbeek, Brussels"
+         data-lang-tr="Otantik Türk Izgarası · Schaerbeek, Brüksel">
+        Grill Turc Authentique · Schaerbeek, Bruxelles
+      </p>
+      <ul class="footer-nav">
+        <li><a href="#menu"        data-lang-fr="Menu"        data-lang-nl="Menu"             data-lang-en="Menu"        data-lang-tr="Menü">Menu</a></li>
+        <li><a href="#hours"       data-lang-fr="Horaires"    data-lang-nl="Openingstijden"   data-lang-en="Hours"       data-lang-tr="Saatler">Horaires</a></li>
+        <li><a href="#gallery"     data-lang-fr="Galerie"     data-lang-nl="Galerij"          data-lang-en="Gallery"     data-lang-tr="Galeri">Galerie</a></li>
+        <li><a href="#contact"     data-lang-fr="Contact"     data-lang-nl="Contact"          data-lang-en="Contact"     data-lang-tr="İletişim">Contact</a></li>
+        <li><a href="#reservation" data-lang-fr="Réservation" data-lang-nl="Reservering"      data-lang-en="Reservation" data-lang-tr="Rezervasyon">Réservation</a></li>
+      </ul>
+      <div class="footer-socials">
+        <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="social-btn" aria-label="TripAdvisor"><i class="fa-brands fa-tripadvisor"></i></a>
+      </div>
+      <div class="footer-divider"></div>
+      <p class="footer-copy"
+         data-lang-fr="© 2026 Diyar Restaurant. Tous droits réservés. Site réalisé par Digital Growth Partner."
+         data-lang-nl="© 2026 Diyar Restaurant. Alle rechten voorbehouden. Website door Digital Growth Partner."
+         data-lang-en="© 2026 Diyar Restaurant. All rights reserved. Website by Digital Growth Partner."
+         data-lang-tr="© 2026 Diyar Restaurant. Tüm hakları saklıdır. Web sitesi Digital Growth Partner tarafından.">
+        © 2026 Diyar Restaurant. Tous droits réservés. Site réalisé par Digital Growth Partner.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    'use strict';
+
+    /* ── SCROLL PROGRESS BAR ── */
+    const progressBar = document.getElementById('progress-bar');
+    window.addEventListener('scroll', () => {
+      const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+      progressBar.style.width = pct + '%';
+    }, { passive: true });
+
+    /* ── NAVBAR SCROLL ── */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 80);
+    }, { passive: true });
+
+    /* ── HERO PARALLAX ── */
+    const heroEl = document.getElementById('hero-section');
+    function updateParallax() {
+      const isMobile = window.matchMedia('(max-width: 768px)').matches;
+      if (!isMobile) {
+        heroEl.style.backgroundPositionY = (window.scrollY * 0.45) + 'px';
+      }
+    }
+    window.addEventListener('scroll', updateParallax, { passive: true });
+
+    /* ── HAMBURGER / MOBILE MENU ── */
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = mobileMenu.querySelectorAll('a.mobile-link');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    /* ── LANGUAGE TOGGLE ── */
+    const SUPPORTED_LANGS = ['fr', 'nl', 'en', 'tr'];
+    let currentLang = localStorage.getItem('diyar-lang') || 'fr';
+
+    function applyLang(lang) {
+      if (!SUPPORTED_LANGS.includes(lang)) lang = 'fr';
+      currentLang = lang;
+      localStorage.setItem('diyar-lang', lang);
+
+      document.querySelectorAll('[data-lang-' + lang + ']').forEach(el => {
+        el.textContent = el.getAttribute('data-lang-' + lang);
+      });
+      document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => {
+        el.placeholder = el.getAttribute('data-placeholder-' + lang);
+      });
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+
+      const bigQuote = document.querySelector('.reservation-left .big-quote');
+      if (bigQuote) {
+        const val = bigQuote.getAttribute('data-lang-' + lang);
+        if (val) bigQuote.textContent = '“' + val.replace(/^"/, '').replace(/"$/, '') + '”';
+      }
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => applyLang(btn.getAttribute('data-lang')));
+    });
+
+    applyLang(currentLang);
+
+    /* ── INTERSECTION OBSERVER: REVEAL ── */
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const siblings = el.parentElement.querySelectorAll('.reveal');
+          let idx = 0;
+          siblings.forEach((s, i) => { if (s === el) idx = i; });
+          const delay = Math.min(idx, 6) * 0.1;
+          el.style.transitionDelay = delay + 's';
+          el.classList.add('visible');
+          revealObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    /* ── STATS COUNTER ── */
+    function easeOutQuart(t) {
+      return 1 - Math.pow(1 - t, 4);
+    }
+
+    function animateCounter(el) {
+      if (el.dataset.static) return;
+      const target = parseFloat(el.dataset.count);
+      const decimals = parseInt(el.dataset.decimals || '0');
+      const suffix = el.dataset.suffix || '';
+      const duration = 1800;
+      const start = performance.now();
+
+      function tick(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = easeOutQuart(progress);
+        const value = eased * target;
+        el.textContent = value.toFixed(decimals) + suffix;
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    const statNumbers = document.querySelectorAll('.stat-number[data-count]');
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    statNumbers.forEach(el => statsObserver.observe(el));
+
+    /* ── GALLERY LIGHTBOX ── */
+    const galleryImages = [
+      'diyar çaydanlık.png',
+      'diyar yemek 1.png',
+      'diyar yemek 2.png',
+      'diyar yemek 3.png',
+      'diyar yemek 4.png',
+      'diyar yemek 5.png'
+    ];
+    const galleryAlts = [
+      'Çaydanlık – Diyar Restaurant',
+      'Spécialité turque – Diyar Restaurant',
+      'Izgara – Diyar Restaurant',
+      'Kebap – Diyar Restaurant',
+      'Grillade – Diyar Restaurant',
+      'Plat turc – Diyar Restaurant'
+    ];
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+    let currentLightboxIndex = 0;
+
+    function openLightbox(index) {
+      currentLightboxIndex = index;
+      lightboxImg.src = galleryImages[index];
+      lightboxImg.alt = galleryAlts[index];
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(() => { lightboxImg.src = ''; }, 300);
+    }
+
+    function showLightboxImage(index) {
+      const total = galleryImages.length;
+      currentLightboxIndex = (index + total) % total;
+      lightboxImg.style.opacity = '0';
+      setTimeout(() => {
+        lightboxImg.src = galleryImages[currentLightboxIndex];
+        lightboxImg.alt = galleryAlts[currentLightboxIndex];
+        lightboxImg.style.opacity = '1';
+      }, 150);
+    }
+
+    lightboxImg.style.transition = 'opacity 0.2s ease';
+
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        openLightbox(parseInt(item.dataset.index, 10));
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', () => showLightboxImage(currentLightboxIndex - 1));
+    lightboxNext.addEventListener('click', () => showLightboxImage(currentLightboxIndex + 1));
+
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') showLightboxImage(currentLightboxIndex - 1);
+      if (e.key === 'ArrowRight') showLightboxImage(currentLightboxIndex + 1);
+    });
+
+    let touchStartX = 0;
+    lightbox.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].clientX;
+    }, { passive: true });
+    lightbox.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 50) {
+        showLightboxImage(currentLightboxIndex + (dx < 0 ? 1 : -1));
+      }
+    }, { passive: true });
+
+    /* ── HOURS: TODAY HIGHLIGHT + OPEN NOW ── */
+    (function highlightToday() {
+      const now = new Date();
+      const day = now.getDay();
+      const hour = now.getHours() + now.getMinutes() / 60;
+      const isOpen = day !== 1 && hour >= 8 && hour < 23;
+
+      const rows = document.querySelectorAll('.hours-row[data-day]');
+      rows.forEach(row => {
+        if (parseInt(row.dataset.day, 10) === day) {
+          row.classList.add('today');
+          if (isOpen) {
+            const badge = document.createElement('span');
+            badge.className = 'open-now-badge';
+            badge.innerHTML = '<span class="open-now-dot"></span> Ouvert maintenant';
+            row.querySelector('.hours-day').appendChild(badge);
+          }
+        }
+      });
+    })();
+
+    /* ── DATE INPUT MIN = TODAY ── */
+    (function setDateMin() {
+      const dateInput = document.getElementById('res-date');
+      if (!dateInput) return;
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const dd = String(today.getDate()).padStart(2, '0');
+      dateInput.min = yyyy + '-' + mm + '-' + dd;
+    })();
+
+    /* ── RESERVATION FORM → WHATSAPP ── */
+    document.getElementById('reservation-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nameEl = document.getElementById('res-name');
+      const dateEl = document.getElementById('res-date');
+      const guestsEl = document.getElementById('res-guests');
+      const msgEl = document.getElementById('res-message');
+
+      let valid = true;
+
+      [nameEl, dateEl, guestsEl].forEach(el => {
+        el.classList.remove('error');
+        if (!el.value.trim()) {
+          el.classList.add('error');
+          valid = false;
+        }
+      });
+
+      if (!valid) return;
+
+      const name = encodeURIComponent(nameEl.value.trim());
+      const date = encodeURIComponent(dateEl.value);
+      const guests = encodeURIComponent(guestsEl.value);
+      const message = encodeURIComponent(msgEl.value.trim() || '—');
+
+      const text = 'R%C3%A9servation%20Diyar%20Restaurant%0ANom%3A%20' + name +
+                   '%0ADate%3A%20' + date +
+                   '%0APersonnes%3A%20' + guests +
+                   '%0AMessage%3A%20' + message;
+
+      window.open('https://wa.me/3224493631?text=' + text, '_blank', 'noopener,noreferrer');
+    });
+
+    document.querySelectorAll('.form-group input, .form-group select').forEach(el => {
+      el.addEventListener('input', () => el.classList.remove('error'));
+    });
+  </script>
+</body>
+</html>
